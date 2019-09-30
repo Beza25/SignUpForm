@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <header th:insert="base :: header"></header>
+    <style>
+        body{
+            background: url("https://res.cloudinary.com/drpyvuhac/image/upload/v1569530630/fall-1072821_1920_0_oryogc.jpg");
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<nav th:replace = "base :: navlinks"></nav>
+<div class="jumbotron">
+    <h1 class="display-4">You Entered</h1>
+    <p th:inline = "text">
+    <ul class="list-group">
+        <li class="list-group-item">First name:      [[${studentInfo.firstName}]]</li>
+        <li class="list-group-item">Last name:       [[${studentInfo.lastName}]]</li>
+        <li class="list-group-item">Email Address:   [[${studentInfo.email}]] </li>
+        <li class="list-group-item">Password:        [[${studentInfo.password}]]</li>
+        <li class="list-group-item">Address:         [[${studentInfo.address}]]</li>
+        <li class="list-group-item">address2:        [[${studentInfo.address2}]]</li>
+        <li class="list-group-item">city:            [[${studentInfo.city}]]</li>
+        <li class="list-group-item">state:           [[${studentInfo.state}]]</li>
+        <li class="list-group-item">state:           [[${studentInfo.zipcode}]]</li>
+
+</ul>
+    </p>
+
+
+</div>
+
+
+<footer th:insert="base :: footer"></footer>
+<div th:insert="base :: scripts"></div>
+</body>
+</html></html>
