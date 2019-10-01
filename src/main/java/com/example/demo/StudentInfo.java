@@ -1,14 +1,29 @@
 package com.example.demo;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class StudentInfo {
+    @NotNull
+    @Size(min =3, max = 24)
     private String firstName;
+    @NotNull
+    @Size(min =3, max = 24)
     private String lastName;
     private String email;
+    @NotNull
+    @Size(min =8, max = 20)
     private String password;
+    @NotNull
     private String address;
     private String address2;
+    @NotNull
     private String city;
+
     private String state;
+    @NotNull
+    @Min(5)
     private int zipcode;
 
     public String getFirstName() {
